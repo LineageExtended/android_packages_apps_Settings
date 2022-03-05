@@ -1,6 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.android.settings"
           coreApp="true"
+          xmlns:tools="http://schemas.android.com/tools"
           android:sharedUserId="android.uid.system">
 
     <original-package android:name="com.android.settings"/>
@@ -131,6 +132,7 @@
             android:usesCleartextTraffic="true"
             android:defaultToDeviceProtectedStorage="true"
             android:directBootAware="true"
+            tools:replace="android:appComponentFactory"
             android:appComponentFactory="androidx.core.app.CoreComponentFactory">
 
         <uses-library android:name="org.apache.http.legacy" />
