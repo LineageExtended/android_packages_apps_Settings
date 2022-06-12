@@ -242,4 +242,8 @@
     <!-- Fingerprint Ripple Effect -->
     <string name="enable_fingerprint_ripple_effect_title">Ripple effect</string>
     <string name="enable_fingerprint_ripple_effect_summary">Show ripple effect on unlock with fingerprint</string>
+
+    <!-- Data usage info in QS footer -->
+    <string name="qs_footer_datausage_title">Daily data usage in QS footer</string>
+    <string name="qs_footer_datausage_summary">Display daily data usage summary in quick settings footer</string>
 </resources>
