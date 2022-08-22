@@ -56,8 +56,8 @@ import lineageos.preference.LineageSystemSettingMainSwitchPreference;
 public class NetworkTrafficSettings extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
 
-    private SystemSettingSwitchPreference mThreshold;
-    private SystemSettingMainSwitchPreference mNetMonitor;
+    private LineageSystemSettingSwitchPreference mThreshold;
+    private LineageSystemSettingMainSwitchPreference mNetMonitor;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -69,13 +69,13 @@ public class NetworkTrafficSettings extends SettingsPreferenceFragment implement
 
         boolean isNetMonitorEnabled = Settings.System.getIntForUser(resolver,
                 Settings.System.NETWORK_TRAFFIC_STATE, 1, UserHandle.USER_CURRENT) == 1;
-        mNetMonitor = (SystemSettingMainSwitchPreference) findPreference("network_traffic_state");
+        mNetMonitor = (LineageSystemSettingMainSwitchPreference) findPreference("network_traffic_state");
         mNetMonitor.setChecked(isNetMonitorEnabled);
         mNetMonitor.setOnPreferenceChangeListener(this);
 
         boolean isThresholdEnabled = Settings.System.getIntForUser(resolver,
                 Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, 0, UserHandle.USER_CURRENT) == 1;
-        mThreshold = (SystemSettingSwitchPreference) findPreference("network_traffic_autohide_threshold");
+        mThreshold = (LineageSystemSettingSwitchPreference) findPreference("network_traffic_autohide_threshold");
         mThreshold.setChecked(isThresholdEnabled);
         mThreshold.setOnPreferenceChangeListener(this);
     }
