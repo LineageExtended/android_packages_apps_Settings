@@ -19,7 +19,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <ineageos.preference.LineageSystemSettingMainSwitchPreference
+    <com.lineageextended.support.preference.SystemSettingMainSwitchPreference
         android:key="network_traffic_state"
         android:title="@string/network_traffic_state_title"
         android:defaultValue="false" />
@@ -27,7 +27,7 @@
     <PreferenceCategory
         android:title="@string/network_options_title">
 
-        <ineageos.preference.LineageSystemSettingSwitchPreference
+        <com.lineageextended.support.preference.SystemSettingSwitchPreference
             android:key="network_traffic_autohide_threshold"
             android:title="@string/network_traffic_autohide_title"
             android:summary="@string/network_traffic_autohide_summary"

@@ -50,14 +50,14 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.Collections;
 
-import lineageos.preference.LineageSystemSettingSwitchPreference;
-import lineageos.preference.LineageSystemSettingMainSwitchPreference;
+import com.lineageextended.support.preference.SystemSettingSwitchPreference;
+import com.lineageextended.support.preference.SystemSettingMainSwitchPreference;
 
 public class NetworkTrafficSettings extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
 
-    private LineageSystemSettingSwitchPreference mThreshold;
-    private LineageSystemSettingMainSwitchPreference mNetMonitor;
+    private SystemSettingSwitchPreference mThreshold;
+    private SystemSettingMainSwitchPreference mNetMonitor;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -69,13 +69,13 @@ public class NetworkTrafficSettings extends SettingsPreferenceFragment implement
 
         boolean isNetMonitorEnabled = Settings.System.getIntForUser(resolver,
                 Settings.System.NETWORK_TRAFFIC_STATE, 1, UserHandle.USER_CURRENT) == 1;
-        mNetMonitor = (LineageSystemSettingMainSwitchPreference) findPreference("network_traffic_state");
+        mNetMonitor = (SystemSettingMainSwitchPreference) findPreference("network_traffic_state");
         mNetMonitor.setChecked(isNetMonitorEnabled);
         mNetMonitor.setOnPreferenceChangeListener(this);
 
         boolean isThresholdEnabled = Settings.System.getIntForUser(resolver,
                 Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, 0, UserHandle.USER_CURRENT) == 1;
-        mThreshold = (LineageSystemSettingSwitchPreference) findPreference("network_traffic_autohide_threshold");
+        mThreshold = (SystemSettingSwitchPreference) findPreference("network_traffic_autohide_threshold");
         mThreshold.setChecked(isThresholdEnabled);
         mThreshold.setOnPreferenceChangeListener(this);
     }

@@ -254,7 +254,7 @@
         android:summary="%s"
         android:order="-10"/>
 
-    <lineageos.preference.LineageSystemSettingSwitchPreference
+    <com.lineageextended.support.SystemSettingSwitchPreference
         android:key="show_app_volume"
         android:title="@string/app_volume_title"
         android:summary="@string/app_volume_summary"
