@@ -134,4 +134,18 @@
         android:summary="@string/summary_placeholder"
         android:order="30"
         settings:controller="com.android.settings.network.AdaptiveConnectivityPreferenceController"/>
+
+    <com.lineageextended.support.preference.SystemSettingSwitchPreference
+        android:key="show_fourg_icon"
+        android:title="@string/show_fourg_icon_title"
+        android:summary="@string/show_fourg_icon_summary"
+        android:order="40"
+        android:defaultValue="false" />
+
+    <com.lineageextended.support.preference.SecureSettingSwitchPreference
+        android:key="use_old_mobiletype"
+        android:title="@string/use_old_mobiletype_title"
+        android:summary="@string/use_old_mobiletype_summary"
+        android:order="35"
+        android:defaultValue="true" />
 </PreferenceScreen>
