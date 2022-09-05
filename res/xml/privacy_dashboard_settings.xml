@@ -76,6 +76,12 @@
         android:title="@string/mic_toggle_title"
         android:summary="@string/mic_toggle_description"
         settings:controller="com.android.settings.privacy.MicToggleController"/>
+    
+    <com.lineageextended.support.preference.SecureSettingSwitchPreference
+            android:key="enable_location_privacy_indicator"
+            android:title="@string/location_privacy_indicator_title"
+            android:summary="@string/location_privacy_indicator_summary"
+            android:defaultValue="true" />
 
     <!-- Show passwords -->
     <SwitchPreference
